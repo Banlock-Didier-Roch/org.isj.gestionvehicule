@@ -1,0 +1,659 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <link th:href="@{main.css}" rel="stylesheet">
+
+</head>
+<body>
+<div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <div class="app-header header-shadow">
+        <div class="app-header__logo">
+            <div class="logo-src"></div>
+            <div class="header__pane ml-auto">
+                <div>
+                    <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="app-header__mobile-menu">
+            <div>
+                <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                </button>
+            </div>
+        </div>
+        <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+        </div>
+        <div class="app-header__content">
+            <div class="app-header-right">
+                <div class="header-btn-lg pr-0">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left">
+                                <div class="btn-group">
+                                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                        <img width="42" class="rounded-circle" th:src="@{assets/images/avatars/1.jpg}" alt="">
+                                        <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                    </a>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                        <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                        <button type="button" tabindex="0" class="dropdown-item">Disconnect</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content-left  ml-3 header-user-info">
+                                <div class="widget-heading">
+                                    Alina Mclourd
+                                </div>
+                                <div class="widget-subheading">
+                                    VP People Manager
+                                </div>
+                            </div>
+                            <div class="widget-content-right header-user-info ml-3">
+                                <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>        </div>
+        </div>
+    </div>
+    <div class="app-main">
+        <div class="app-sidebar sidebar-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                        <span>
+                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                            </button>
+                        </span>
+            </div>    <div class="scrollbar-sidebar">
+            <div class="app-sidebar__inner">
+                <ul class="vertical-nav-menu">
+                    <li class="app-sidebar__heading">MENU</li>
+                    <li>
+                        <a href="../static/index.html">
+                            <i class="metismenu-icon pe-7s-diamond"></i>
+                            TAIDI Facturation
+                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a th:href="@{/globales}">
+                                    <i class="metismenu-icon"></i>
+                                    Globales
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/restaurant}">
+                                    <i class="metismenu-icon"></i>
+                                    Restaurants
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/location}">
+                                    <i class="metismenu-icon">
+                                    </i>Location de chambres
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/traiteur}">
+                                    <i class="metismenu-icon">
+                                    </i>Service traiteur
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/serigraphie}">
+                                    <i class="metismenu-icon">
+                                    </i>Sérigraphie
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/facturation}"  class="mm-active">
+                            <i class="metismenu-icon pe-7s-ticket"></i>
+                            Facturation
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/gest_personnel}" >
+                            <i class="metismenu-icon pe-7s-users"></i>
+                            Ressource Humaine
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                <div class="app-page-title">
+                    <div class="page-title-wrapper">
+                        <div class="page-title-heading">
+                            <div class="page-title-icon">
+                                <i class="pe-7s-stopwatch icon-gradient bg-amy-crisp">
+                                </i>
+                            </div>
+                            <div>FACTURATION
+                                <div class="page-title-subheading">Cette interface vous permet d'enregistrer des commandes et de générer des tickets.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Informations sur la commande</h5>
+                                <!--@{/EnregistrerCommande}-->
+                                <form id="form" class="" th:method="post" th:action="@{/facturation}">
+                                    <div class="position-relative form-group"><label for="nomClient" class="">Client</label><input name="nomClient" id="nomClient" placeholder="Veuillez entrer le nom du client" value="Divers" type="text" class="form-control"></div>
+
+                                    <div class="position-relative form-group"><label class="">Montant TOTAL : </label><label id="montantTotal" class="">0 FCFA </label></div>
+                                    <input name="hiddenMontantTotal" id="hiddenMontantTotal"  value=0 type="hidden" class="form-control">
+                                    <h6 class="card-title">Panier commande</h6>
+                                        <table class="mb-0 table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Plat</th>
+                                                <th>prix</th>
+                                                <th>Quantité</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="panier">
+                                            <tr th:id="'produit'+${produit.id}" th:each="produit : ${produitsPanier}">
+                                                <th scope="row" th:text="${produit.id}">1</th>
+                                                <td th:text="${produit.designation}">OKOK</td>
+                                                <td th:text="${produit.prix}">1500</td>
+                                                <td><input type="number" name="quantite" value="1"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--<button class="mt-1 btn btn-primary" id="btnEnregistrer">Enregistrer la commande</button>-->
+                                </form>
+                                <button class="mt-1 btn btn-primary" id="btnEnregistrer">Enregistrer la commande</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                            <li class="nav-item">
+                                <a role="tab" class="nav-link active" id="tab-1" data-toggle="tab" href="#tab-content-1">
+                                    <span>Restaurant</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a role="tab" class="nav-link" id="tab-2" data-toggle="tab" href="#tab-content-2">
+                                    <span>Sérigraphie</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
+                                <div class="search-wrapper">
+                                    <div class="input-holder">
+                                        <input type="text" id="search_restauration" class="search-input" placeholder="Type to search">
+                                        <button class="search-icon"><span></span></button>
+                                    </div>
+                                    <button class="close"></button>
+                                </div>
+                                <br>
+                                <div class="main-card mb-3 card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Produits du restaurant</h5>
+                                        <table class="mb-0 table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Plat</th>
+                                                <th>prix</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="liste_plats">
+                                            <tr th:id="'produit'+${produit.id}" th:each="produit : ${produitsRestauration}">
+                                                <th scope="row" th:text="${produit.id}">1</th>
+                                                <td th:text="${produit.designation}">OKOK</td>
+                                                <td th:text="${produit.prix}">1500</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-block text-center card-footer">
+                                        <nav class="" aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">1</a></li>
+                                                <li class="page-item active"><a href="javascript:void(0);" class="page-link">2</a></li>
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">3</a></li>
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">4</a></li>
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">5</a></li>
+                                                <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                                            </ul>
+                                        </nav>                                	</div>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="tab-pane tabs-animation fade" id="tab-content-2" role="tabpanel">
+                                <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
+                                    <div class="search-wrapper">
+                                        <div class="input-holder">
+                                            <input type="text" class="search-input" placeholder="Type to search">
+                                            <button class="search-icon"><span></span></button>
+                                        </div>
+                                        <button class="close"></button>
+                                    </div>
+                                    <br>
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Produits de la Sérigraphie</h5>
+                                            <table class="mb-0 table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Plat</th>
+                                                    <th>prix</th>
+                                                    <th>Quantité</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>OKOK</td>
+                                                    <td>1500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>BHB</td>
+                                                    <td>500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Poulet DG</td>
+                                                    <td>2500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>OKOK</td>
+                                                    <td>1500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>BHB</td>
+                                                    <td>500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Poulet DG</td>
+                                                    <td>2500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>OKOK</td>
+                                                    <td>1500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>BHB</td>
+                                                    <td>500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Poulet DG</td>
+                                                    <td>2500</td>
+                                                    <td><input type="number" name="" value="1"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="d-block text-center card-footer">
+                                            <nav class="" aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">1</a></li>
+                                                    <li class="page-item active"><a href="javascript:void(0);" class="page-link">2</a></li>
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">3</a></li>
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">4</a></li>
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">5</a></li>
+                                                    <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                                                </ul>
+                                            </nav>                                  </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{assets/scripts/main.js}"></script>
+
+<script th:inline="javascript">
+
+    $("form").submit(function () { return false; });
+    //Rendre l'élément btnEnregistrer non-cliquable
+    var btnEnregistrer = document.getElementById("btnEnregistrer");
+    btnEnregistrer.style.pointerEvents = "none";
+    btnEnregistrer.style.backgroundColor = "grey";
+
+    var table = document.getElementById("liste_plats");
+    var rows = table.getElementsByTagName("tr");
+
+    //ajout des écouteurs des champs de recherche
+    addSearchListener("search_restauration");
+
+    //Récupération des listes de produits
+    /*<![CDATA[*/
+    var listeProduitsRestauration = /*[[${produitsRestauration}]]*/;
+    var listeProduitsCommande = /*[[${produitsPanier}]]*/;
+    var quantites = /*[[${quantites}]]*/;
+    /*]]>*/
+    for (i = 0; i < rows.length; i++) {
+        var currentRow = table.rows[i];
+        var createClickHandler = function(row) {
+            return function() {
+                var cell = row.getElementsByTagName("th")[0];
+                var id = cell.innerHTML;
+                quantites.push(1);
+                selectProduct(listeProduitsRestauration, listeProduitsCommande, id);
+                addRefresh(id, listeProduitsCommande);
+                setMontantTotalCommande();
+
+                //réactiver le bouton btnEnregistrer
+                if(listeProduitsCommande.length == 1){
+                    btnEnregistrer.style.pointerEvents = "auto";
+                    btnEnregistrer.style.backgroundColor = "#2955c8";
+                }
+            };
+        };
+        currentRow.onclick = createClickHandler(currentRow);
+    }
+
+    //appliquer un Listener sur le bouton d'enregistrement
+    validate();
+
+
+    function selectProduct(listeProduitsRestauration, listeProduitsCommande, id){
+        for (var i=0 ; i<listeProduitsRestauration.length; i++){
+            if(listeProduitsRestauration[i].id == id){
+                listeProduitsCommande.push(listeProduitsRestauration[i]);
+            }
+        }
+    }
+
+    function addRefresh(id, listeProduitsCommande){
+        //Rendre l'élément non-cliquable
+        document.getElementById("produit"+id).style.pointerEvents = "none";
+        document.getElementById("produit"+id).style.backgroundColor = "#b4c5f0";
+
+        //rafraîchir les listes
+        var table = document.getElementById("panier");
+        table.innerHTML='';
+        var quantite = 1;
+        for(var i=0 ; i<listeProduitsCommande.length; i++){
+            if(quantites[i]!=NaN){
+                quantite = quantites[i];
+            }
+            var row = ` <tr id="panier${listeProduitsCommande[i].id}">
+                            <th scope="row">${listeProduitsCommande[i].id}</th>
+                            <td>${listeProduitsCommande[i].designation}</td>
+                            <td>${listeProduitsCommande[i].prix}</td>
+                            <td><input id="${i}" type="number" name="" value="${quantite}" min="1"></td>
+                            <td><button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger" id="supprimerPanier${listeProduitsCommande[i].id}"><i class="pe-7s-trash btn-icon-wrapper"> </i></button></td>
+                        </tr>`;
+            table.innerHTML += row;
+        }
+
+        for(var i=0 ; i<listeProduitsCommande.length; i++){
+            //Ajout de l'evennement qui permet de mettre à jour le montant quand la quantite d'un produit est changée et la suppression d'un produit du panier
+            var currentSpinner = table.getElementsByTagName("tr")[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0];
+            var currentDeleteButton = table.getElementsByTagName("tr")[i].getElementsByTagName("td")[3].getElementsByTagName("button")[0];
+            var cell = table.getElementsByTagName("tr")[i].getElementsByTagName("th")[0];
+            var id = cell.innerHTML;
+
+            var createClickHandlerSpinner = function(spinner) {
+                return function() {
+                    var id = spinner.id;
+                    var value = spinner.value;
+                    if(value === String(parseInt(value, 10))){
+                        quantites[id]=parseInt(value);
+                        setMontantTotalCommande();
+                    }
+                };
+            };
+            var createClickHandlerDelete = function(id1) {
+                return function() {
+
+                    //console.log("panier"+id);
+                    //Supprimer du panier
+                    var row = document.getElementById("panier"+id1);
+                    table.removeChild(row);
+
+                    listeProduitsCommande.splice(listeProduitsCommande.findIndex(function(i){
+                        return i.id === id;
+                    }), 1)
+
+                    //console.log(index);
+                    //listeProduitsCommande.splice(index, 1); //suppression
+
+                    //Reconstruire la liste de produits
+                    rebuiltTable(FilterFunction(document.getElementById("search_restauration").value, listeProduitsRestauration));
+
+                    console.log(listeProduitsCommande);
+
+                };
+            };
+            //currentSpinner.onclick = createClickHandler(currentSpinner);
+            //currentSpinner.onkeyup = createClickHandler(currentSpinner);
+            currentSpinner.oninput = createClickHandlerSpinner(currentSpinner);
+            currentDeleteButton.onclick = createClickHandlerDelete(id);
+        }
+
+            setMontantTotalCommande();
+    }
+
+    function deleteFromID(id) {
+
+    }
+
+    function setMontantTotalCommande() {
+        var total = 0;
+
+        for(var i=0 ; i<listeProduitsCommande.length; i++){
+            total += listeProduitsCommande[i].prix * quantites[i];
+        }
+
+        var labelMontantTotal = document.getElementById("montantTotal");
+        labelMontantTotal.innerText = " "+total+" FCFA";
+        document.getElementById("hiddenMontantTotal").value = total;
+    }
+
+    function addSearchListener(id){
+        var currentSearch = document.getElementById(id);
+        var createOnKeyUpListener = function (search) {
+            return function () {
+                var value = $(this).val();
+
+                //Get Filtered Product List
+                var data = FilterFunction(value, listeProduitsRestauration);
+
+                //Rebuilt the table
+                rebuiltTable(data);
+            }
+        }
+        currentSearch.onkeyup = createOnKeyUpListener(currentSearch);
+    }
+
+    function FilterFunction(value, data){
+        var filteredData = [];
+        for(var i=0;i<data.length; i++){
+            value = value.toLowerCase();
+            var fname = data[i].designation.toLowerCase();
+
+            if(fname.includes(value)){
+                filteredData.push(data[i]);
+            }
+        }
+        return filteredData;
+    }
+
+    function rebuiltTable(data) {
+        //rafraîchir les listes
+        table.innerHTML='';
+        for(var i=0 ; i<data.length; i++){
+            var row = ` <tr id="produit${data[i].id}">
+                            <th scope="row">${data[i].id}</th>
+                            <td>${data[i].designation}</td>
+                            <td>${data[i].prix}</td>
+                        </tr>`;
+            table.innerHTML += row;
+
+            if(listeProduitsCommande.includes(data[i])){
+                document.getElementById("produit"+data[i].id).style.pointerEvents = "none";
+                document.getElementById("produit"+data[i].id).style.backgroundColor = "#b4c5f0";
+            }
+        }
+
+        for(var i=0 ; i<data.length; i++){
+            //Add onClickListener
+            //var currentRow = table.rows[i];
+            var currentRow = document.getElementById("produit"+data[i].id);
+            var createClickHandler = function(row) {
+                return function() {
+                    var cell = row.getElementsByTagName("th")[0];
+                    var id = cell.innerHTML;
+                    quantites.push(1);
+                    selectProduct(listeProduitsRestauration, listeProduitsCommande, id);
+                    addRefresh(id, listeProduitsCommande);
+                    setMontantTotalCommande();
+
+                    //réactiver le bouton btnEnregistrer
+                    if(listeProduitsCommande.length == 1){
+                        btnEnregistrer.style.pointerEvents = "auto";
+                        btnEnregistrer.style.backgroundColor = "#2955c8";
+                    }
+                };
+            };
+            currentRow.onclick = createClickHandler(currentRow);
+        }
+    }
+
+    function validate(){
+        var btnEnregistrer = document.getElementById("btnEnregistrer");
+
+        var createClickHandler = function(button) {
+            return function() {
+                var json = JSON.stringify({
+                                            "produits" : listeProduitsCommande,
+                                            "quantites" : quantites,
+                                            "prixTotal" : document.getElementById("hiddenMontantTotal").value
+                                          });
+                console.log(json);
+                $.ajax({
+                    type: "POST",
+                    url: "/EnregistrerCommande",
+                    //data: JSON.stringify(Object.assign({}, listeProduitsCommande)),
+                    data:json,
+                    contentType : 'application/json; charset=utf-8',
+                    dataType : 'json',
+                    success: function (response) {
+                        //service.php response
+                        //alert("done!!!");
+                        //location = location;
+                    },
+                    complete: function (response) {
+                        //service.php response
+                        //alert("done!!!");
+                        location = location;
+                    }
+
+                });
+                //console.log(Object.assign({}, listeProduitsCommande));
+            };
+        };
+        btnEnregistrer.onclick = createClickHandler(btnEnregistrer);
+    }
+
+</script>
+</body>
+</html>
+

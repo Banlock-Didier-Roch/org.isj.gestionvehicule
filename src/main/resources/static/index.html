@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>TAIDI Login page</title>
+    <link rel="stylesheet" href="authentification.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="text">
+        Login</div>
+    <form action="/Authentification" method="POST">
+        <div class="field">
+            <input type="text" name="identifiant" required>
+            <span class="fas fa-user"></span>
+            <label>Identifiant</label>
+        </div>
+        <div class="field">
+            <input type="password" name="password" required>
+            <span class="fas fa-lock"></span>
+            <label>mot de passe</label>
+        </div>
+        <div class="forgot-pass">
+            <a href="#">Mot de passe oublié?</a>
+        </div>
+        <h6 style="color: red">
+
+        </h6>
+        <button id="seConnecter">se connecter</button>
+    </form>
+
+    <!--<button id="seConnecter">se connecter2</button>-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!--<script type="text/javascript">
+
+        var btnConnecter = document.getElementById("seConnecter");
+
+        var createClickHandler = function(button) {
+            return function() {
+
+                $.ajax({
+                    type: "GET",
+                    url: "/gestionTAIDI/api/submit",
+                    data: { name: "John", location: "Boston" }, // parameters
+                    data
+                    success: function (response) {
+                        //service.php response
+                        console.log(response.toString());
+                    }
+                });
+
+            };
+        };
+        btnConnecter.onclick = createClickHandler(btnConnecter);
+    </script>-->
+
+</div>
+</body>
+</html>
